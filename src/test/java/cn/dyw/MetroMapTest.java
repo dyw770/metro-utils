@@ -8,7 +8,7 @@ public class MetroMapTest {
     public void buildRouteDetails() throws Exception {
         MetroMap metroMap = new MetroMap();
         metroMap.init("beijing-subway.txt");
-        RouteDetails routeDetails = metroMap.buildRouteDetails("军事博物馆", "车公庄西");
+        RouteDetails routeDetails = metroMap.buildRouteDetails("俸伯", "双井");
         RouteLine routeLine = routeDetails.minSiteRoute();
         System.out.println(routeLine.printRouter());
     }
