@@ -12,4 +12,13 @@ public class MetroMapTest {
         RouteLine routeLine = routeDetails.minSiteRoute();
         System.out.println(routeLine.printRouter());
     }
+
+    @Test
+    public void testChengDu() throws Exception {
+        MetroMap metroMap = new MetroMap();
+        metroMap.init("chengdu-subway.txt");
+        RouteDetails routeDetails = metroMap.buildRouteDetails("天府五街", "万盛");
+        RouteLine routeLine = routeDetails.minSiteRoute();
+        System.out.println(routeLine.printRouter());
+    }
 }
