@@ -16,7 +16,7 @@ public class RingMetroLine extends MetroLine {
         Set<String> tranSites = getTransferSites().keySet();
         List<String> siteList = getSites()
                 .stream()
-                .filter(item -> tranSites.contains(item.getName()))
+                .filter(item -> tranSites.contains(item.getName()) || item.getName().equals(siteName))
                 .sorted(Comparator.comparingInt(Site::getIndex))
                 .map(Site::getName)
                 .collect(Collectors.toList());

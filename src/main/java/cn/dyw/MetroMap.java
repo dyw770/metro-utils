@@ -58,7 +58,7 @@ public class MetroMap {
             String lineName = split[0];
             if (lineName.endsWith("|")) {
                 metroLine = new RingMetroLine();
-                lineName = lineName.substring(0, lineName.length() - 1);
+                lineName = lineName.substring(0, lineName.length() - 1).trim();
             } else {
                 metroLine = new StraightMetroLine();
             }
@@ -68,7 +68,7 @@ public class MetroMap {
             Set<Site> siteSet = new HashSet<>();
             for (int i = 0; i < siteArr.length; i++) {
                 Site site = new Site();
-                site.setName(siteArr[i]);
+                site.setName(siteArr[i].trim());
                 site.setIndex(i);
                 siteSet.add(site);
             }

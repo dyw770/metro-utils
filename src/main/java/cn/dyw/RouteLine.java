@@ -52,17 +52,17 @@ public class RouteLine {
             if (!lineName.equals(route.getLine().getName())) {
                 lineName = route.getLine().getName();
                 if (i != 0) {
-                    rt.append(lineName).append("\n");
+                    rt.append(lineName.trim()).append("\n");
                 }
             }
             for (int k = 0; k < sites.size(); k++) {
                 if (i != 0 && k == 0) {
 
                 } else {
-                    rt.append(sites.get(k).getName()).append("\n");
+                    rt.append(sites.get(k).getName().trim()).append("\n");
                 }
             }
         }
-        return (sum - routes.size()) + "\n" + rt.toString();
+        return (sum - routes.size()) + "\n" + rt.toString().trim();
     }
 }
