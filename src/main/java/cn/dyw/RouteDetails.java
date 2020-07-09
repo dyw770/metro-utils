@@ -35,11 +35,10 @@ public class RouteDetails {
             List<Route> routes = lists.get(i).getRoutes();
             int sum = 0;
             for (int k = 0; k < routes.size(); k++) {
-                for (Route route : routes) {
-                    sum += route.getSites().size();
-                }
+                sum += routes.get(k).getSites().size();
+                sum -= 1;
             }
-            map.put(i, sum - 1);
+            map.put(i, sum);
         }
 
         Map.Entry<Integer, Integer> min = map.entrySet()

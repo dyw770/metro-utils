@@ -22,6 +22,7 @@ public class Site implements Comparable<Site> {
      */
     private int index;
 
+    @Override
     public int compareTo(Site o) {
         return o.index - index;
     }
